@@ -47,18 +47,49 @@ function renderPatty() {
 
 function renderCheese() {
   //Trial 1 - Change the visibility of cheese based on state by manipulating the DOM
+  let patty = document.querySelector("#Cheese");
+  if (state.Cheese) {
+    patty.style.display = "inherit";
+  } else {
+    patty.style.display = "none";
+  }
+}
 }
 
 function renderTomatoes() {
   //Trial 1 - Change the visibility of Tomatoes based on state by manipulating the DOM
+  let patty = document.querySelector("#Tomatoes);
+  //you can also use getElementById
+  if (state.Tomatoes) {
+    patty.style.display = "inherit";
+  } else {
+    patty.style.display = "none";
+  }
+}
 }
 
 function renderOnions() {
   //Trial 1 - Change the visibility of Onions based on state by manipulating the DOM
+  let patty = document.querySelector("#Onions");
+  //you can also use getElementById
+  if (state.Onions) {
+    patty.style.display = "inherit";
+  } else {
+    patty.style.display = "none";
+  }
+}
 }
 
 function renderLettuce() {
   //Trial 1 - Change the visibility of Lettuce based on state by manipulating the DOM
+  let patty = document.querySelector("#Lettuce");
+  //you can also use getElementById
+  if (state.Lettuce) {
+    patty.style.display = "inherit";
+  } else {
+    patty.style.display = "none";
+  }
+}
 }
 
 document.querySelector(".btn-patty").onclick = function () {
@@ -67,15 +98,31 @@ document.querySelector(".btn-patty").onclick = function () {
 };
 
 // Trial 2 - Setup event listener for the cheese button
+document.querySelector(".btn-cheese").onclick = function () {
+  state.Cheese = !state.Cheese;
+  renderAll();
+};
 
 
 // Trial 2 - Setup event listener for the tomatoes button
+document.querySelector(".btn-tomatoes").onclick = function () {
+  state.Cheese = !state.Tomatoes;
+  renderAll();
+};
 
 
 // Trial 2 - Setup event listener for the onion button
+document.querySelector(".btn-Onions").onclick = function () {
+  state.Cheese = !state.Onions;
+  renderAll();
+};
 
 
 // Trial 2 - Setup event listener for the lettuce button
+document.querySelector(".btn-Lettuce").onclick = function () {
+  state.Cheese = !state.Lettuce;
+  renderAll();
+};
 
 
 //Challenge 1 - Add/Remove the class active to the buttons based on state
